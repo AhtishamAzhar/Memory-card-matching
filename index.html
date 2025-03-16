@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Master - Card Matching Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Segoe UI Emoji';
+            src: local('Segoe UI Emoji');
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <!-- Theme Switcher -->
+        <div class="theme-switcher">
+            <button data-theme="classic">Classic</button>
+            <button data-theme="neon">Neon</button>
+            <button data-theme="dark">Dark Mode</button>
+        </div>
+
+        <!-- Game Header -->
+        <div class="game-header">
+            <div class="score-container">
+                <span>Moves: <span id="moves">0</span></span>
+                <span>Time: <span id="timer">00:00</span></span>
+                <span>Score: <span id="score">0</span></span>
+            </div>
+            <div class="controls">
+                <button id="hint-btn">Use Hint (3)</button>
+                <button id="restart-btn">Restart</button>
+                <button id="sound-toggle">🔊</button>
+            </div>
+        </div>
+
+        <!-- Difficulty Selection -->
+        <div class="difficulty-select">
+            <button data-difficulty="easy">Easy</button>
+            <button data-difficulty="medium">Medium</button>
+            <button data-difficulty="hard">Hard</button>
+        </div>
+
+        <!-- Game Grid -->
+        <div class="game-grid" id="gameGrid"></div>
+
+        <!-- Leaderboard -->
+        <div class="leaderboard">
+            <h2>Top Scores</h2>
+            <div id="leaderboard-list"></div>
+        </div>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div class="modal" id="gameOverModal">
+        <div class="modal-content">
+            <h2>Game Over!</h2>
+            <p>Your Score: <span id="final-score">0</span></p>
+            <p>Time: <span id="final-time">00:00</span></p>
+            <button id="play-again">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
